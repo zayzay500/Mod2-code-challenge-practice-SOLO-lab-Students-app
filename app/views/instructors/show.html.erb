@@ -1,0 +1,11 @@
+<h1><%= @instructor.name %></h1>
+
+<h2>Students:</h2>
+<p>Average Student Age: <%= @instructor.avg_student_age %></p>
+<ul>
+    <% @students.each do |student| %>
+        <li>
+            <%= link_to student.name, student_path(student) %>
+        </li>
+    <% end %>
+</ul>
